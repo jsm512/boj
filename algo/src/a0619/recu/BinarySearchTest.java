@@ -32,8 +32,8 @@ public class BinarySearchTest {
 			 * 150의 값의 삽입 포인트는 121 뒤 idx로는 7의 위치에 삽입 포인트가 결정이 됨
 			 * 삽입 포인트 값 -(삽입 포인트)에 -1을 더한 값인 -8을 return 하게 됨
 			 */
-			int ans = Arrays.binarySearch(a, key); 
-			
+			int ans = Arrays.binarySearch(a, key);
+
 			sb.append("#").append(tc).append(" ").append(ans).append("\n");
 		}
 		
