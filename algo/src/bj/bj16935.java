@@ -10,7 +10,7 @@ public class bj16935 {
 
 	public static void main(String[] args) throws Exception {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st = new StringTokenizer(br.readLine());
+		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 
 		n = Integer.parseInt(st.nextToken());
 		m = Integer.parseInt(st.nextToken());
@@ -19,13 +19,13 @@ public class bj16935 {
 		a = new int[n][m];
 
 		for (int i = 0; i < n; i++) {
-			st = new StringTokenizer(br.readLine());
+			st = new StringTokenizer(br.readLine(), " ");
 			for (int j = 0; j < m; j++) {
 				a[i][j] = Integer.parseInt(st.nextToken());
 			}
 		}
 
-		st = new StringTokenizer(br.readLine());
+		st = new StringTokenizer(br.readLine(), " ");
 		for (int i = 0; i < r; i++) {
 			dir = Integer.parseInt(st.nextToken());
 			switch (dir) {
@@ -117,10 +117,29 @@ public class bj16935 {
 			}
 		}
 		
+//		1 | 2        4 | 1
+//	  b --+--d  =>   --+--
+//	    4 | 3        3 | 2
+		
+		
+//		for(int i = 0; i < n/2; i++) {
+//			for(int j = 0; j < m/2; j++) {
+//				int tmp = a[i][j];
+//				a[i][j] = a[n/2+i][j];
+//				a[n/2+i][j] = a[n/2+i][m/2+j];
+//				a[n/2+i][m/2+j] = a[i][m/2+j];
+//				a[i][m/2+j] = tmp;
+//			}
+//		}
+		
 		a = t;
 	}
 
 	private static void four() {
+		
+//		1 | 2        2 | 3
+//    b --+--d  =>   --+--
+//		4 | 3        1 | 4
 		t = new int[m][n];
 		for (int i = 0; i < n; i++) {
 			for (int j = 0; j < m; j++) {
