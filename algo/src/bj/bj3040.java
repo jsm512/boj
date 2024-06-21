@@ -17,6 +17,7 @@ public class bj3040 {
 				for (int i : b) {
 					sb.append(i).append("\n");
 				}
+				return;
 			}
 			return;
 		}

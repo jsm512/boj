@@ -42,6 +42,8 @@ public class bj2798 {
 		
 		
 		System.out.println(ans);
+		
+		br.close();
 	}
 
 }
