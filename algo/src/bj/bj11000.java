@@ -19,9 +19,7 @@ public class bj11000 {
 				a[i][j] = Integer.parseInt(st.nextToken());
 			}
 		}
-		
 		Arrays.sort(a, (o1,o2) -> Integer.compare(o1[0], o2[0]));
-		
 //		System.out.println(Arrays.deepToString(a));
 		PriorityQueue<Integer> pq = new PriorityQueue<>();
 		

@@ -40,5 +40,4 @@ public class bj1786 {
 			System.out.println(x);
 		}
 	}
-
 }

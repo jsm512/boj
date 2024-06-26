@@ -3,7 +3,7 @@ package a0620.perm;
 import java.io.*;
 import java.util.*;
 
-public class PerMain {
+public class PermMain {
 
 	static int N = 4, R = 3, C = 0;
 	static int[] a = { 1, 2, 3, 4 }, b = new int[R];
