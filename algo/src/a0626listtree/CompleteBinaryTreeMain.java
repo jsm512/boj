@@ -29,8 +29,8 @@ public class CompleteBinaryTreeMain {
 			while(!q.isEmpty()) {
 				i = q.poll();
 				System.out.print(nodes[i] + " ");
-				if(i*2 + 0<= lastIndex) q.offer(i * 2 + 0);
-				if(i*2 + 1<= lastIndex) q.offer(i * 2 + 1);
+				if(i*2 + 0<= lastIndex) q.offer(i * 2 + 0); //left
+				if(i*2 + 1<= lastIndex) q.offer(i * 2 + 1); //right
 			}
 		}
 		
@@ -54,8 +54,8 @@ public class CompleteBinaryTreeMain {
 	public static void main(String[] args) {
 		int size = 12;
 		CompleteBinaryTree<Character> tree = new CompleteBinaryTree<>(size);
-		for(int i = 'A'; i < 'A'+size; i++) {
-			tree.add((char)i);
+		for(int i = 0; i < size; i++) {
+			tree.add((char)('A'+i));
 		}
 		
 		tree.bfs(1);
