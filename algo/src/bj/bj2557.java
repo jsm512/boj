@@ -1,9 +1,9 @@
 package bj;
 
-public class tes {
+public class bj2557 {
 
 	public static void main(String[] args) {
-		System.out.println(10 / 3);
+		System.out.println("Hello World!");
 	}
 
 }

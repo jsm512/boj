@@ -3,34 +3,30 @@ import java.io.*;
 import java.util.*;
 
 public class bj2630 {
-//	static final int[] dx = {-1,0,1,0};
-//	static final int[] dy = {0,1,0,-1};
-	
 	static int n;
 	static int[][] a;
-	static boolean[][] v;
 	static int white_cnt = 0, blue_cnt = 0;
 	
 	//분할
-	static void split(int r, int c, int n) {
+	static void split(int r, int c, int size) {
 		
-		if(check(r,c,n)) {
+		if(check(r,c,size)) {
 			if(a[r][c] == 0) white_cnt++;
 			else blue_cnt++;
 			return;
 		}
-		int s = n / 2;
-		split(r,c,s);
-		split(r,c+s,s);
-		split(r+s,c,s);
-		split(r+s,c+s,s);
+		int s = size / 2;
+		split(r,c,s); //2사
+		split(r,c+s,s); //1사
+		split(r+s,c,s); //3사
+		split(r+s,c+s,s); //4사
 	}
 	
-	static boolean check(int r, int c, int n) {
+	static boolean check(int r, int c, int size) {
 		int check_color = a[r][c];
 		
-		for(int i = r; i < r + n; i++) {
-			for(int j = c; j < c + n; j++) {
+		for(int i = r; i < r + size; i++) {
+			for(int j = c; j < c + size; j++) {
 				if(a[i][j] != check_color) return false;
 			}
 		}
